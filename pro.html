@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Website</title>
+    <link rel="stylesheet" href="pro.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">MyWebsite</div>
+        <button class="nav-toggle" aria-label="toggle navigation">
+          <span class="hamburger">&#9776;</span>
+        </button>
+
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#service">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#apply">Apply</a></li>
+        </ul>
+        <div class="dark-mode-toggle">
+          <input
+            type="checkbox"
+            id="dark-mode-switch"
+            name="dark-mode-switch"
+          />
+          <label for="dark-mode-switch">Dark Mode</label>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" id="Home">
+        <h1>Welcome to MyWebsite</h1>
+        <p class="hero-text">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+        <button class="modal-btn">Learn More</button>
+      </section>
+
+      <!-- Image Slider -->
+      <section class="slider" id="about">
+        <div>
+          <h1 class="slider-text">Here is the slider:</h1>
+        </div>
+        <div class="slide active">
+          <img
+            src="https://www.messynessychic.com/wp-content/uploads/2022/01/13053784234_6d18f1a7b4_k-930x1584.jpg"
+            alt="Slide 1"
+          />
+        </div>
+        <div class="slide">
+          <img src="https://i.redd.it/femzd2nvzz1a1.jpg" alt="Slide 2" />
+        </div>
+        <div class="slide">
+          <img
+            src="https://c8.alamy.com/comp/EXRBYR/1990s-uk-ordeal-by-innocence-by-agatha-christie-book-cover-EXRBYR.jpg"
+            alt="Slide 3"
+          />
+        </div>
+        <button class="prev" aria-label="Previous slide"></button>
+        <button class="next" aria-label="Next slide">></button>
+        </section>
+        <div class="animated-Button"><button id="animatedButton">Press this</button></div>
+      
+
+      <!-- Tabs -->
+      <section class="tabs" id="service">
+        <div class="tab-buttons">
+          <button class="tab-btn active" data-tab-target="#tab1">Tab 1</button>
+          <button class="tab-btn" data-tab-target="#tab2">Tab 2</button>
+          <button class="tab-btn" data-tab-target="#tab3">Tab 3</button>
+        </div>
+        <div class="tab-content">
+          <div id="tab1" class="tab-pane active">
+            <h2>Tab 1 Content</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+          </div>
+          <div id="tab2" class="tab-pane">
+            <h2>Tab 2 Content</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+          </div>
+          <div id="tab3" class="tab-pane">
+            <h2>Tab 3 Content</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+          </div>
+        </div>
+      </section>
+      <div id="registrationForm">
+        <h2 id="apply">Register</h2>
+        <input type="email" id="email" placeholder="Email" required>
+        <input type="password" id="password" placeholder="Password" required>
+        <button onclick="register()">Register</button>
+        <div id="message"></div>
+    </div>
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+          apiKey: "AIzaSyCaIv5x9FQB72h04_7CGnW5AeLSvqr-IFY",
+          authDomain: "form-e6e02.firebaseapp.com",
+          projectId: "form-e6e02",
+          storageBucket: "form-e6e02.appspot.com",
+          messagingSenderId: "787691479873",
+          appId: "1:787691479873:web:688939a11bd808fae877c0",
+          measurementId: "G-NM425JLR1W"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+      </script>
+
+    </main>
+
+    <footer>
+      <div class="footer-columns" id="contact">
+        <div>
+          <ul class="footer-list">
+            <li>About</li>
+            <li>Services</li>
+            <li>Info</li>
+            <li>Contact</li>
+          </ul>
+        </div>
+        <div>
+          <ul class="footer-list">
+            <li><h4>Contact Us</h4></li>
+            <li>ahtanberdiayau@gmail.com</li>
+            <li>8 705 966 72 66</li>
+          </ul>
+        </div>
+      </div>
+      <p>2024 MyWebsite. All rights reserved.</p>
+    </footer>
+
+    <div class="modal hidden">
+      <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <p>This is a modal window. You can add more content here.</p>
+      </div>
+    </div>
+
+    <script src="pro.js"></script>
+  </body>
+</html>
